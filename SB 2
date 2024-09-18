@@ -32,3 +32,14 @@ int main()
 ││altfel scrie ’B’
 │└■
 └■ pana cand x<y
+2
+struct elev
+{
+  unsigned short cod;
+  double nota1;
+  double nota2;
+}
+elev v[1000];
+3
+pon
+vertr
