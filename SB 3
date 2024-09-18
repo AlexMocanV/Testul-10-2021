@@ -28,3 +28,49 @@
     if(sx<x+y&&x+y<sy)return 1;
     else return 0;
 }
+2 #include <iostream>
+
+int mat[21][21];
+
+int main()
+{
+    int n,m;
+    std::cin>>m>>n;
+    for(int i=1;i<=m;i++)
+    {
+        for(int j=1;j<=n;j++)
+        {
+            std::cin>>mat[i][j];
+        }
+    }
+    bool ok=true;
+    for(int i=1;i<=n-1;i++)
+    {
+        for(int j=2;j<=m;j++)
+        {
+            if(mat[1][i]==mat[j][n]){std::cout<<mat[1][i]<<' ';ok=false;}
+        }
+    }
+    if(ok)std::cout<<"nu exista";
+    
+    return 0;
+}
+3#include <iostream>
+#include <fstream>
+std::string nume="bac.txt";
+std::ifstream fin(nume);
+
+int main()
+{
+    int a,b,poz=1;
+    fin>>a;
+    while(fin>>b)
+    {
+        if(a>b)
+        poz++;
+    }
+    std::cout<<poz;
+}
+programul citeste primul nr si il stocheaza iontro variabila 
+dupa care citeste si compara primul nr cu fiecare nr citit, iar daca este mai mare decat acesta se contorizeaza intro variabila initializata cu val 1 
+LA FINAL AFISAM VARIABILA
