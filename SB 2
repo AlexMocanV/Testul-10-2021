@@ -1,0 +1,34 @@
+1 a)AAAAAAAA
+  b) 16 17
+  c)#include <iostream>
+
+int main()
+{
+    int x,y;
+    std::cin>>x>>y;
+    if(x<y)
+    {
+        x=x-y;
+        y=y+x;
+        x=y-x;
+    }
+    while(x>=y)
+    {
+        std::cout<<'A';
+        x-=y;
+        if(y%2==0) std::cout<<'A';
+        else std::cout<<'B';
+    }
+    return 0;
+}
+  d) citeşte x,y (numere naturale)
+┌dacă x<y atunci
+│ xx-y; yx+y; xy-x
+└■
+| execută
+│ scrie ’A’
+│ xx-y
+│┌dacă x%2=0 atunci scrie ’A’
+││altfel scrie ’B’
+│└■
+└■ pana cand x<y
